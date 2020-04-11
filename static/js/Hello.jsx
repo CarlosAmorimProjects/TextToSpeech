@@ -36,7 +36,7 @@ export default class Hello extends React.Component {
                 <Col md={7} mdOffset={5}>
                 <div class="input-group input-group-sm mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Enter your name: </span>
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Enter the text: </span>
                 </div>
                 <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </input>
@@ -46,7 +46,7 @@ export default class Hello extends React.Component {
                 <Row>
                 <Col md={7} mdOffset={5}>
                     <Button bsSize="large" bsStyle="danger" onClick={this.getPythonHello}>
-                    Say Hello!
+                    Send !
                     </Button>
                 </Col>
                 </Row>
