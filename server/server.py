@@ -1,7 +1,6 @@
 # server.py
 from flask import Flask, render_template, request
 import speak
-import url_for
 
 # text = "AI AI minha machadinha !!"
 # lang = "pt"
@@ -20,7 +19,7 @@ def hello():
         lang = request.form["lang"]
         print(text)
         speak.get_speak(text,lang)
-        return url_for ("static", filename="mp3_path")
+        return flask.url_for ("hello", filename="mp3_path")
 
 if __name__ == "__main__":
     app.run()
