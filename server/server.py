@@ -13,12 +13,13 @@ def index():
 @app.route("/hello", methods=["GET","POST"])
 def hello():
     text=''
-    lang=''
-    if request.method == "POST":
+    lang='pt'
+    if request.method == "GET":
         text = request.form["text"]
         lang = request.form["lang"]
         print(text)
-    return speak.get_speak(text,lang)
+        speak.get_speak(text,lang)
+        return flask.url_for("hello", filename="mp3_path")
 
 if __name__ == "__main__":
     app.run()
