@@ -1,6 +1,10 @@
 import React from "react";
 import { Button, Grid, Row, Col } from "react-bootstrap";
 
+const language = 'en-us'
+const text = 'something to say'
+const url = `${origin}/${language}/${text}`
+
 var $ = require('jquery');
 
 export default class Hello extends React.Component {
@@ -17,7 +21,7 @@ export default class Hello extends React.Component {
     }
 
     getPythonHello() {
-        $.get(window.location.href + "hello", () => {
+        $.get(url, () => {
             console.log();
         });
     }
