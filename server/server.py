@@ -11,7 +11,8 @@ def index():
 def hello(text,lang):
     if request.method == "GET":
         speak.get_speak(text,lang)
-        return flask.url_for("hello", filename="mp3_path")
+        return url_for("static", filename="mp3_path")
 
 if __name__ == "__main__":
     app.run()
+    
