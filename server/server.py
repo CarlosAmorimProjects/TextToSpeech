@@ -15,4 +15,3 @@ def hello(text,lang):
 
 if __name__ == "__main__":
     app.run()
-    
