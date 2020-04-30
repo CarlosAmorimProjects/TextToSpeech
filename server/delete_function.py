@@ -8,7 +8,8 @@ def delete_all ():
     global x
     x = x + 1
     print (x)
-    if x > 2:
+    if x > 50:
        files = glob.glob(os.path.join('/home/kajo/Desktop/TTS/TextToSpeech/server/*.mp3'))
        for file in files:
          os.remove(file)
+         x = 0
