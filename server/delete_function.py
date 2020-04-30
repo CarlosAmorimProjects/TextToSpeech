@@ -13,4 +13,3 @@ def delete_all ():
        for file in files:
          os.remove(file)
          x = 0
-
