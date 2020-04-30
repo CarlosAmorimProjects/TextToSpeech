@@ -2,7 +2,7 @@
 import random
 
 def random_filename ():
-    text = "tts"
+    text = 'tts'
     number = str(random.randint(1,9999999999999))
     filetext = text + number
     filename = filetext + ".mp3"
