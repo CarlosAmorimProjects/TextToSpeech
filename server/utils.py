@@ -1,17 +1,15 @@
 # utils.py
-import random
+import uuid
 import os
 import glob
 
 def random_tts_filename ():
-    text = 'tts'
-    number = str(random.randint(1,9999999999999))
-    filetext = text + number
+    filetext = filename = str(uuid.uuid4())
     filename = filetext + ".mp3"
 
     return filename
 
-def delete_all_tts_files (limit=50):
+def delete_all_tts_files (limit=100):
        basedir = os.path.abspath(os.path.dirname(__file__))
        files = glob.glob(os.path.join(basedir, '*.mp3'))
        if len(files)>limit:
