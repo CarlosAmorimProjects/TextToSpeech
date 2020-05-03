@@ -9,6 +9,4 @@ def get_speak (text, lang):
     tts = gTTS(text=text, lang=lang, slow=False)
     tts.save(filename)
     return filename
-    
 
-mp3_path = os.path.join(os.path.dirname(__file__), "../static/dist/FILENAME")
