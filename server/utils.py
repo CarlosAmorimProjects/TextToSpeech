@@ -4,9 +4,8 @@ import os
 import glob
 
 def random_tts_filename ():
-    filetext = filename = str(uuid.uuid4())
+    filetext = str(uuid.uuid4())
     filename = filetext + ".mp3"
-
     return filename
 
 def delete_all_tts_files (limit=100):
