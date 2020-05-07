@@ -1,8 +1,8 @@
 import React , { useState } from 'react';
-import api from "../js/services/api";
+import api from "../../services/api";
 
 
-function Hello () {
+function Text () {
 
     const [text, setText] = useState(" ");
     const [lang, setLang] = useState(" ");
@@ -67,4 +67,4 @@ function Hello () {
 
 }
 
-export default Hello;
+export default Text;

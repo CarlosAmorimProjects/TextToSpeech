@@ -1,0 +1,15 @@
+. venv/bin/activate
+
+flask run
+
+Se der erro  :
+
+You did not provide the "FLASK_APP"
+
+Fazer:
+
+export FLASK_APP=server.py
+
+e depois já dá com :
+
+flask run

@@ -32,5 +32,8 @@
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.6.1",
     "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }

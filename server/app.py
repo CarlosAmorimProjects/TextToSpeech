@@ -7,8 +7,8 @@ app = Flask(__name__, static_folder="../static/dist", template_folder="../static
 def index():
     return render_template("index.html")
 
-@app.route("/hello/<text>/<lang>")
-def hello(text,lang):
+@app.route("/text/<text>/<lang>")
+def text(text,lang):
     if request.method == "GET":
        mp3_path = speak.get_speak(text,lang)
        return url_for("static", filename = mp3_path)
