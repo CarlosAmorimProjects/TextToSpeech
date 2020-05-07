@@ -55,7 +55,7 @@ function Text () {
           <option value='af'>Afrikaans</option>
           <option value='sq'>Albanian</option>
           <option value='ar'>Arabic</option>
-          <option value='hy'>Armenian</option>
+          <option value='hy'>Armenian</option> 
         </select>
 
         <button className="button" type="submit">Translate</button>
