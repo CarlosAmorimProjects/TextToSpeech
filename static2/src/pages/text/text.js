@@ -4,32 +4,29 @@ import api from "../../services/api";
 
 function Text () {
 
-    const [text, setText] = useState(" ");
-    const [lang, setLang] = useState(" ");
+    const [text, setText] = useState("");
+    const [lang, setLang] = useState("");
 
-   async function handleNewTranslation(e) {
+   function handleNewTranslation(e) {
       e.preventDefault();
-  
-      const data = {
-        text,
-        lang
-      };
 
       try {
-
-        await api.get('/text', data, {
+        api.get('/text', {
           headers: {
             text: text,
             lang: lang
           }
+        }).then(response => {
+         const audio_file = response.data;
+         console.log(audio_file)
         });
   
       } catch (error) {
         alert("Error registering the case");
       }
 
-      console.log(data.text);
-      console.log(data.lang)
+      console.log(text);
+      console.log(lang)
       }
     
 
