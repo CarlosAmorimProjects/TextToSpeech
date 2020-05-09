@@ -7,27 +7,27 @@ function Text () {
     const [text, setText] = useState("");
     const [lang, setLang] = useState("");
 
-   function handleNewTranslation(e) {
+  async function handleNewTranslation(e) {
       e.preventDefault();
 
       try {
-        api.get('/text', {
+        
+         const response = await api.get('text', {
           headers: {
-            text: text,
-            lang: lang
+            text,
+            lang
           }
-        }).then(response => {
-         const audio_file = response.data;
-         console.log(audio_file)
         });
-  
+        
+
+      console.log(text);
+      console.log(lang);
+      console.log(response.data);
+      
       } catch (error) {
         alert("Error registering the case");
       }
-
-      console.log(text);
-      console.log(lang)
-      }
+  }
     
 
 

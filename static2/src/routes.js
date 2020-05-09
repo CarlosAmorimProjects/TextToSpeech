@@ -10,8 +10,8 @@ function Routes () {
         <BrowserRouter>
             <Switch>
                 <Route path = "/" exact component = {Welcome} />
-                <Route path = "/text" exact component = {Text} />
-                <Route path = "/speech" exact component = {Speech} />
+                <Route path = "/text" component = {Text} />
+                <Route path = "/speech" component = {Speech} />
             </Switch>
         </BrowserRouter>
     );
