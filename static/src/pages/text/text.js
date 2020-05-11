@@ -1,8 +1,8 @@
 import React , { useState } from 'react';
+import axios from 'axios';
 import api from "../../services/api";
 
-
-function Text () {
+export default function Text () {
 
     const [text, setText] = useState("");
     const [lang, setLang] = useState("");
@@ -12,25 +12,16 @@ function Text () {
       console.log(text);
       console.log(lang);
 
-    //   var config = {
-    //     headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded',
-    //     'text': 'text',
-    //     'lang': 'lang' 
-    //         }
-    //   };
-      
-       await api.get('/text',  
-       { 
+      const res = await axios.get('http://127.0.0.1:5000', {
         headers: {
-         'Content-Type': 'application/x-www-form-urlencoded',
-         'text': text,
-         'lang': lang 
-             }
-       });
-    
-  } 
-    
+        'text': text,
+        'lang': lang
+         }
+        });
+
+        console.log(res);
+
+    }
 
 
     return (
@@ -65,5 +56,3 @@ function Text () {
     );
 
 }
-
-export default Text;
