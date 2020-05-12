@@ -1,5 +1,4 @@
 import React , { useState } from 'react';
-import axios from 'axios';
 import api from "../../services/api";
 
 export default function Text () {
@@ -12,14 +11,11 @@ export default function Text () {
       console.log(text);
       console.log(lang);
 
-      const res = await axios.get('http://127.0.0.1:5000', {
-        headers: {
-        'text': text,
-        'lang': lang
-         }
-        });
+      const url = "/text/"+text+"/"+lang;
 
-        console.log(res);
+      const res = await api.get(url);
+
+        console.log(res);        
 
     }
 
@@ -45,7 +41,8 @@ export default function Text () {
           <option value='af'>Afrikaans</option>
           <option value='sq'>Albanian</option>
           <option value='ar'>Arabic</option>
-          <option value='hy'>Armenian</option> 
+          <option value='hy'>Armenian</option>
+          <option value='pt'>Portuguese</option>
         </select>
 
         <button className="button" type="submit">Translate</button>
