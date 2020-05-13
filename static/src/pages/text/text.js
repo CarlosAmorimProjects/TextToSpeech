@@ -13,9 +13,15 @@ export default function Text () {
 
       const url = "/text/"+text+"/"+lang;
 
-      const res = await api.get(url);
-
-        console.log(res);        
+      api.get(url)
+      .then((response) => {
+        console.log(response.data);
+        var data = response.data;
+        window.open(data);
+      }, (error) => {
+        alert(error);
+      });
+                
 
     }
 
