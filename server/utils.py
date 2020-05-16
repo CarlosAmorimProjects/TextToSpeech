@@ -5,7 +5,7 @@ import glob
 
 def random_tts_filename ():
     filetext = str(uuid.uuid4())
-    filename = "files/" + filetext + ".mp3"
+    filename = "../static/build/static/audiofiles/" + filetext + ".mp3"
     return filename
 
 def delete_all_tts_files (limit=50):
