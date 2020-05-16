@@ -10,8 +10,8 @@ def index():
 @app.route("/text/<text>/<lang>")
 def text(text,lang):
     if request.method == "GET":
-       mp3_path = speak.get_speak(text,lang)
-       return mp3_path
+       mp3_path=speak.get_speak(text,lang)
+       return url_for('static', filename=mp3_path.replace('../static/build/static', ''))
 
 if __name__ == "__main__":
     app.run()

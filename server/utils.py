@@ -9,7 +9,7 @@ def random_tts_filename ():
     return filename
 
 def delete_all_tts_files (limit=50):
-       files = glob.glob(os.path.join("static", '*.mp3'))
+       files = glob.glob(os.path.join("../static/build/static/audiofiles/", '*.mp3'))
        if len(files)>limit:
            for file in files:  
              os.remove(file)
