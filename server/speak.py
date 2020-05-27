@@ -1,13 +1,12 @@
 # speak.py
 from gtts import gTTS
 import os
-
-FILENAME = "tts.mp3"
+import utils
 
 def get_speak (text, lang):
-    print("speak" + text)
-    print("speaklang" + lang)
+    filename = utils.random_tts_filename()
+    utils.delete_all_tts_files()
     tts = gTTS(text=text, lang=lang, slow=False)
-    tts.save(FILENAME)
+    tts.save(filename)
+    return filename
 
-mp3_path = os.path.join(os.path.dirname(__file__), "tts.mp3")
